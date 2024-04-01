@@ -1,11 +1,15 @@
-import LandingPage from "../../components/landing/landing";
-
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />;
-
 export default function Home() {
   return (
-    <main>
-     <LandingPage />
+    <main className="container mx-auto flex flex-col ">
+      <h3>30 seconds of knowledge</h3>
+      <article className="container mx-auto">
+        <p>Where developers</p>
+        <div className="text-5xl font-extrabold">
+          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            learn together
+          </h1>
+        </div>
+      </article>
     </main>
   );
 }

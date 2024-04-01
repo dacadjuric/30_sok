@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../logo/logo";
 import NavLink from "./nav-link";
 
-export default function MainHeader() {
+export default function Header() {
   return (
     <>
       <header className="bg-indigo-950 sticky top-0 px-8">

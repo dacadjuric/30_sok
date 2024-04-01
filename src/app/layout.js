@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Header from "../../components/header/Header";
+import Header from "../../components/header/header";
 
 import "./globals.css";
 
@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "30 Seconds Of Knowledge",
-  description: "Landing page of 30 seconds og knowledge",
+  description: "Landing page for 30 seconds of knowledge",
 };
 
 export default function RootLayout({ children }) {
