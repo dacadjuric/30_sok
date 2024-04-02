@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 import Logo from "../logo/logo";
-import NavLink from "./nav-link";
+import NavLink from "../nav-link/nav-link";
+
+import Link from "next/link";
 
 export default function Header() {
   return (
