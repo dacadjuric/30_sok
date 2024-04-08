@@ -24,6 +24,7 @@ module.exports = {
       yellow: "#ffc800",
       background: "#0e1217",
       text: "#fff",
+      textLight: "#f1f1f1",
       footerTextDark: "#818589",
       footerIcons: "#D3D3D3",
     },

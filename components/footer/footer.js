@@ -9,26 +9,15 @@ import Logo from "../logo/logo";
 export default function Footer() {
   let year = new Date().getFullYear();
   return (
-    <footer className="mx-auto border-t-2 border-yellow bg-background text-text">
+    <footer className="mx-auto border-t-2 border-yellow bg-background text-text px-8">
       <div className="container mx-auto">
-        <div className="flex flex-row justify-between p-8">
+        <div className="flex flex-row justify-between py-8">
           <div className="flex flex-col justify-start text-sm">
-            <Logo width={96} color="#f1f1f1" className="mb-4" />
+            <Logo width={96} className="mb-4 fill-textLight" />
             <div className="">
               <p>
-                <Link
-                  href="https://30secondsofknowledge.com/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="font-semibold"
-                >
-                  30 Seconds of Knowledge
-                </Link>
-                &nbsp; is created, written and maintained
-              </p>
-              <p>
-                {" "}
-                by &nbsp;
+                30 Seconds of Knowledge is created, written and maintained
+                <br />
                 <Link
                   href="https://github.com/petrovicstefanrs"
                   rel="noopener noreferrer"
@@ -37,7 +26,7 @@ export default function Footer() {
                 >
                   @petrovicstefanrs
                 </Link>
-                &nbsp; and powered by Open Source projects.
+                and powered by Open Source projects.
               </p>
             </div>
           </div>
@@ -67,9 +56,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr className="h-px mx-8" />
-        <div className="px-8 text-footerTextDark">
-          <div className="flex items-center flex-row justify-between py-8">
+        <hr className="h-px" />
+        <div className="p-8 text-footerTextDark">
+          <div className="flex items-center flex-row justify-between">
             <p>
               &copy;{year} &nbsp;
               <Link
@@ -83,7 +72,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-row space-x-0.5 text-footerTextDark">
               <Link href="/">
-                <FacebookIcon width={32} height={32} color="text-footerIcons" />
+                <FacebookIcon width={32} height={32} />
               </Link>
               <Link href="/">
                 <InstagramIcon width={32} height={32} />
