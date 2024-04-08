@@ -1,9 +1,4 @@
-export default function Logo({
-  width = 914,
-  height = 240,
-  color = "#ffc800",
-  ...rest
-}) {
+export default function Logo({ width, height, color = "#ffc800", ...rest }) {
   return (
     <svg
       viewBox="0 0 914 240"
