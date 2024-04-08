@@ -11,27 +11,25 @@ export default function Footer() {
   return (
     <footer className="mx-auto border-t-2 border-yellow bg-background text-text px-8">
       <div className="container mx-auto">
-        <div className="flex flex-row justify-between py-8">
-          <div className="flex flex-col justify-start text-sm">
+        <div className="flex flex-row justify-between py-12">
+          <div className="flex flex-col justify-start text-sm mr-12">
             <Logo width={96} className="mb-4 fill-textLight" />
-            <div className="">
-              <p>
-                30 Seconds of Knowledge is created, written and maintained
-                <br />
-                <Link
-                  href="https://github.com/petrovicstefanrs"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="italic underline"
-                >
-                  @petrovicstefanrs
-                </Link>
-                and powered by Open Source projects.
-              </p>
-            </div>
+            <p>
+              <b>30 Seconds of Knowledge</b> is created, written and maintained
+              <br />
+              <Link
+                href="https://github.com/petrovicstefanrs"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="italic underline"
+              >
+                @petrovicstefanrs
+              </Link>
+              and powered by Open Source projects.
+            </p>
           </div>
-          <div className="flex flex-row text-sm">
-            <div className="flex flex-col mx-4 gap-1.5">
+          <div className="flex flex-row gap-12 text-sm">
+            <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Download</h5>
               <Link href="/">Chrome extension</Link>
               <Link href="/">Firefox add-on</Link>
@@ -40,7 +38,7 @@ export default function Footer() {
               <Link href="/">Brave extension</Link>
               <Link href="/">Arc extension</Link>
             </div>
-            <div className="flex flex-col mx-4 gap-1.5">
+            <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Community</h5>
               <Link href="/">Github</Link>
               <Link href="/">Feature requests</Link>
@@ -48,7 +46,7 @@ export default function Footer() {
               <Link href="/">Swag store</Link>
               <Link href="/">Newsletter</Link>
             </div>
-            <div className="flex flex-col mx-4 gap-1.5">
+            <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Product</h5>
               <Link href="/">About Us</Link>
               <Link href="/">Contact</Link>
@@ -57,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="h-px" />
-        <div className="p-8 text-footerTextDark">
+        <div className="py-12 text-footerTextDark">
           <div className="flex items-center flex-row justify-between">
             <p>
               &copy;{year} &nbsp;
