@@ -1,9 +1,11 @@
+"use client";
 import Link from "next/link";
-
 import Logo from "../logo/logo";
 import NavLink from "../nav-link/nav-link";
+import useGetDownloadUrl from "../../hooks/use-get-download-url";
 
 export default function Header() {
+  const { downloadUrl, isSupported } = useGetDownloadUrl();
   return (
     <>
       <header className="mx-auto bg-background sticky top-0 px-8">
@@ -29,9 +31,12 @@ export default function Header() {
                 </li>
               </ul>
               <div className="grid content-center">
-                <button className="text-yellow rounded-lg p-2 ring-2 ring-yellow">
+                <Link
+                  className="text-yellow rounded-lg p-2 ring-2 ring-yellow"
+                  href={downloadUrl}
+                >
                   Download extension
-                </button>
+                </Link>
               </div>
             </nav>
           </div>
