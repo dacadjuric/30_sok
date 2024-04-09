@@ -1,7 +1,9 @@
-import Header from "../../components/header/header";
 import { Roboto_Flex } from "next/font/google";
-import "./globals.css";
+
+import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
+
+import "./globals.css";
 
 const roboto = Roboto_Flex({ subsets: ["latin"] });
 
