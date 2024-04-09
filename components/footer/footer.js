@@ -1,10 +1,13 @@
 import Link from "next/link";
+
 import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
 import TwitterIcon from "../icons/twitter";
 import GithubIcon from "../icons/github";
 import LinkedInIcon from "../icons/linkedin";
 import Logo from "../logo/logo";
+
+import { DOWNLOAD_URLS } from "../../constants/download-urls";
 
 export default function Footer() {
   let year = new Date().getFullYear();
@@ -17,34 +20,34 @@ export default function Footer() {
             <p>
               <b>30 Seconds of Knowledge</b> is created, written and maintained
               <br />
-              <Link
+              <a
                 href="https://github.com/petrovicstefanrs"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="italic underline"
               >
                 @petrovicstefanrs
-              </Link>
+              </a>{" "}
               and powered by Open Source projects.
             </p>
           </div>
           <div className="flex flex-row gap-12 text-sm">
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Download</h5>
-              <Link href="/">Chrome extension</Link>
-              <Link href="/">Firefox add-on</Link>
-              <Link href="/">Edge add-on</Link>
-              <Link href="/">Opera add-on</Link>
-              <Link href="/">Brave extension</Link>
-              <Link href="/">Arc extension</Link>
+              <a href={DOWNLOAD_URLS.chrome}>Chrome extension</a>
+              <a href={DOWNLOAD_URLS.firefox}>Firefox add-on</a>
+              <a href={DOWNLOAD_URLS.edge}>Edge add-on</a>
+              {/* <a href={DOWNLOAD_URLS.chrome}>Opera add-on</a> */}
+              <a href={DOWNLOAD_URLS.chrome}>Brave extension</a>
+              <a href={DOWNLOAD_URLS.chrome}>Arc extension</a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Community</h5>
-              <Link href="/">Github</Link>
-              <Link href="/">Feature requests</Link>
-              <Link href="/">Report Issues</Link>
-              <Link href="/">Swag store</Link>
-              <Link href="/">Newsletter</Link>
+              <a href="/">Github</a>
+              <a href="/">Feature requests</a>
+              <a href="/">Report Issues</a>
+              <a href="/">Swag store</a>
+              <a href="/">Newsletter</a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Product</h5>
