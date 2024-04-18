@@ -1,7 +1,7 @@
 export default function LinkedInIcon({
   width = 50,
   height = 50,
-  color = "#f1f1f1",
+  color = "#818589",
   ...rest
 }) {
   return (

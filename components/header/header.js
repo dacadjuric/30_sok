@@ -10,7 +10,7 @@ import useGetDownloadUrl from "../../hooks/use-get-download-url";
 function Header() {
   const { downloadUrl, isSupported } = useGetDownloadUrl();
   return (
-    <header className="mx-auto bg-background sticky top-0 px-8">
+    <header className="mx-auto bg-background/50 sticky top-0 left-0 right-0 px-8 border-b border-textLight backdrop-blur-lg z-10">
       <div className="container mx-auto">
         <div className="mx-auto flex justify-between">
           <div className="size-24 grid content-center">
@@ -19,26 +19,26 @@ function Header() {
             </Link>
           </div>
           <nav className="flex justify-items-center">
-            <ul className="grid content-center justify-items-center grid-cols-3 gap-4 text-text mr-4">
-              <li className="basis-1/4">
+            <ul className="grid content-center justify-items-center grid-cols-3 gap-4 text-text text-xs mr-4">
+              <li>
+                <NavLink href="/snippets"> Random Snippet </NavLink>
+              </li>
+              <li>
                 <NavLink href="/about" className="text-text">
-                  about
+                  Favourites
                 </NavLink>
               </li>
-              <li className="basis-1/4">
-                <NavLink href="/snippets">snippets </NavLink>
-              </li>
-              <li className="basis-1/4">
-                <NavLink href="/extension">extension </NavLink>
+              <li>
+                <NavLink href="/extension">All Snippets </NavLink>
               </li>
             </ul>
             <div className="grid content-center">
-              <Link
-                className="text-yellow rounded-lg p-2 ring-2 ring-yellow"
+              <a
+                className="text-background font-roboto font-semibold uppercase text-sm rounded-lg px-4 py-3 bg-yellow"
                 href={downloadUrl}
               >
-                Download extension
-              </Link>
+                add to browser
+              </a>
             </div>
           </nav>
         </div>

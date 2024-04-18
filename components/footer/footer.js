@@ -71,7 +71,7 @@ export default function Footer() {
                 30 Seconds of Knowledge
               </Link>
             </p>
-            <div className="flex flex-row space-x-0.5 text-footerTextDark">
+            <div className="flex flex-row space-x-2.5 text-footerTextDark">
               <Link href="/">
                 <FacebookIcon width={32} height={32} />
               </Link>

@@ -1,11 +1,12 @@
-import { Roboto_Flex } from "next/font/google";
+import { Roboto_Flex, Teko } from "next/font/google";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
 import "./globals.css";
 
-const roboto = Roboto_Flex({ subsets: ["latin"] });
+const roboto = Roboto_Flex({ subsets: ["latin"], variable: "--font-roboto" });
+const teko = Teko({ subsets: ["latin"], variable: "--font-teko" });
 
 export const metadata = {
   title: "30 Seconds Of Knowledge",
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={roboto.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${teko.variable} ${roboto.variable}`}
+      >
         <Header />
         {children}
         <Footer />
