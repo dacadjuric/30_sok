@@ -12,7 +12,7 @@ import { DOWNLOAD_URLS } from "../../constants/download-urls";
 export default function Footer() {
   let year = new Date().getFullYear();
   return (
-    <footer className="mx-auto border-t-2 border-yellow bg-background text-text px-8">
+    <footer className="mx-auto border-t-2 border-yellow bg-background text-text px-8 relative z-10">
       <div className="container mx-auto">
         <div className="flex flex-row justify-between py-12">
           <div className="flex flex-col justify-start text-sm mr-12">

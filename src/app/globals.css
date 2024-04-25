@@ -8,4 +8,25 @@ body {
 }
 h1 {
   font-family: var(--font-teko);
+  line-height: 0;
+}
+
+@layer components {
+  .bg-text-start {
+    transform: skewY(-15deg) translate3d(0, 0, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .bg-text-top-end {
+    transform: skewY(-15deg) translate3d(10%, 0, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .bg-text-bottom-end {
+    transform: skewY(-15deg) translate3d(-10%, 0, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
 }
