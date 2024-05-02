@@ -10,23 +10,43 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        shake: {
+          "0%": { transform: "translate(2px, 2px) rotate(2deg)" },
+          "10%": { transform: "translate(6px, 2px) rotate(4deg)" },
+          "20%": { transform: "translate(10px, -2px) rotate(6deg)" },
+          "30%": { transform: "translate(14px, -4px) rotate(4deg)" },
+          "40%": { transform: "translate(18px, -6px) rotate(2deg)" },
+          "50%": { transform: "translate(20px, -8px) rotate(-2deg)" },
+          "60%": { transform: "translate(18px, -6px) rotate(-4deg)" },
+          "70%": { transform: "translate(14px, -2px) rotate(-6deg)" },
+          "80%": { transform: "translate(10px, 0px) rotate(-8deg)" },
+          "90%": { transform: "translate(6px, 2px) rotate(-6deg)" },
+          "100%": { transform: "translate(2px, 2px) rotate(2deg)" },
+        },
+        shock: {
+          "0%, 100%": { transform: "translate(2px, 4px)" },
+          "50%": { transform: "translate(6px, 8px)" },
+          "70%": { transform: "translate(2px, 8px)" },
+        },
       },
-    },
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      yellow: "#ffc800",
-      background: "#0e1217",
-      text: "#fff",
-      textLight: "#f1f1f1",
-      footerTextDark: "#818589",
-      footerIcons: "#D3D3D3",
+      animation: {
+        shake: "shake 3s linear infinite",
+        shock: "shock 1s linear infinite",
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        yellow: "#ffc800",
+        background: "#0e1217",
+        text: "#fff",
+        textLight: "#f1f1f1",
+        footerTextDark: "#818589",
+        footerIcons: "#D3D3D3",
+        ctaLightColor: "#969da9",
+      },
     },
   },
   plugins: [],
