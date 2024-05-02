@@ -9,11 +9,11 @@ import edgeIcon from "../../assets/edge.svg";
 import firefoxIcon from "../../assets/firefox.svg";
 
 function DownloadButton(props) {
-  const { downloadUrl, isSupported } = useGetDownloadUrl();
+  const { downloadUrl } = useGetDownloadUrl();
 
   return (
     <a
-      className="mx-24 bg-textLight rounded-lg border-textLight pt-3 pr-5 pb-3 pl-4 flex place-content-center gap-x-2 text-background uppercase"
+      className="mx-24 bg-textLight rounded-lg border-textLight pt-3 pr-5 pb-3 pl-4 flex place-items-center gap-x-2 text-background uppercase"
       href={downloadUrl}
       {...props}
     >
