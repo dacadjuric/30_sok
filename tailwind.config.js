@@ -31,10 +31,15 @@ module.exports = {
           "50%": { transform: "translate(6px, 8px)" },
           "70%": { transform: "translate(2px, 8px)" },
         },
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         shake: "shake 3s linear infinite",
         shock: "shock 1s linear infinite",
+        loop: "loop var(--duration) linear infinite var(--direction)",
       },
       colors: {
         transparent: "transparent",
