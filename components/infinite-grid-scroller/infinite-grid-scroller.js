@@ -32,11 +32,11 @@ const obj = {
     logo: dart,
   },
   git: {
-    name: "git",
+    name: "Git",
     logo: git,
   },
   go: {
-    name: "GO",
+    name: "Go",
     logo: go,
   },
   html: {
@@ -44,11 +44,11 @@ const obj = {
     logo: html,
   },
   interview_questions: {
-    name: "interview_questions",
+    name: "Interview Questions",
     logo: interview_questions,
   },
   javascript: {
-    name: "JavaScript",
+    name: "Javascript",
     logo: javascript,
   },
   python: {
@@ -73,9 +73,9 @@ const obj = {
   },
 };
 
-const DURATION = 15000;
+const DURATION = 35000;
 const ROWS = 5;
-const TAGS_PER_ROW = 5;
+const TAGS_PER_ROW = 10;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -111,7 +111,7 @@ export default function InfiniteGridScroller() {
       {[...new Array(ROWS)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
-          duration={random(DURATION - 5000, DURATION + 5000)}
+          duration={random(DURATION - 10000, DURATION + 10000)}
           reverse={i % 2}
         >
           {shuffle(Object.values(obj))
