@@ -13,7 +13,7 @@ export default function LandingPage() {
     <div className="relative min-h-[768px] container mx-auto flex flex-col place-content-center">
       <div className="absolute inset-x-0 -top-[76px] bottom-0 flex flex-col justify-center items-center text-[600px] leading-[450px] overflow-hidden z-0">
         <div className="absolute top-0 left-0 bottom-0 w-40 bg-gradient-to-r from-background z-10"></div>
-        <div className="absolute top-0 right-0 bottom-0 w-40 bg-gradient-to-l from-background  z-10"></div>
+        <div className="absolute top-0 right-0 bottom-0 w-40 bg-gradient-to-l from-background z-10"></div>
         <span
           className={`font-black opacity-5 uppercase ${
             isTransform ? "bg-text-top-end" : "bg-text-start"
