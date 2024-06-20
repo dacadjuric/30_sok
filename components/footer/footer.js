@@ -43,16 +43,24 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Community</h5>
-              <a href="/">Github</a>
-              <a href="/">Feature requests</a>
-              <a href="/">Report Issues</a>
-              <a href="/">Swag store</a>
-              <a href="/">Newsletter</a>
+              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge">
+                Github
+              </a>
+              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues">
+                Feature requests
+              </a>
+              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues">
+                Report Issues
+              </a>
+              <a href="https://30-seconds-of-knowledge.creator-spring.com/">
+                Swag store
+              </a>
+              <a href="http://eepurl.com/giRHzP">Newsletter</a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Product</h5>
               <Link href="/">About Us</Link>
-              <Link href="/">Contact</Link>
+              <Link href="mailto:office@30secondsofknowledge.com">Contact</Link>
               <Link href="/">Media kit</Link>
             </div>
           </div>
