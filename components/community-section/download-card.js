@@ -13,7 +13,7 @@ function DownloadCard(props) {
   const { downloadUrl } = useGetDownloadUrl();
   return (
     <a
-      className="px-6 py-7 w-80 rounded-lg bg-[#17191f] flex flex-col items-center"
+      className="px-6 py-7 w-80 rounded-lg bg-[#17191f] flex flex-col items-center transition transform hover:scale-105"
       href={downloadUrl}
       {...props}
     >

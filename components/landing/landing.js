@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import DownloadButton from "../download-button/download-button";
-import Squiggles from "../icons/Squiggles";
 import SquigglesX from "../icons/SquigglesX";
 
 export default function LandingPage() {
@@ -31,7 +30,7 @@ export default function LandingPage() {
       </div>
 
       <div className="relative mx-auto text-center flex flex-col justify-items-center content-center gap-8">
-        <Squiggles
+        <squi
           width={140}
           className="absolute -top-[104px] -right-[44px] rotate-[140deg] animate-shake"
         />
