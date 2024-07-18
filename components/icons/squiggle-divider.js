@@ -1,4 +1,4 @@
-export default function SquigglesDivider({
+export default function SquiggleDivider({
   width,
   height,
   color = "#ffc800",

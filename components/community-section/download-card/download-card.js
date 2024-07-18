@@ -1,13 +1,13 @@
 "use client";
 
-import useGetDownloadUrl from "../../hooks/use-get-download-url";
-
-import firefoxIcon from "../../assets/firefox.svg";
-import chromeIcon from "../../assets/chrome.svg";
-import edgeIcon from "../../assets/edge.svg";
-
 import Image from "next/image";
 import dynamic from "next/dynamic";
+
+import useGetDownloadUrl from "../../../hooks/use-get-download-url";
+
+import firefoxIcon from "../../../assets/firefox.svg";
+import chromeIcon from "../../../assets/chrome.svg";
+import edgeIcon from "../../../assets/edge.svg";
 
 function DownloadCard(props) {
   const { downloadUrl } = useGetDownloadUrl();

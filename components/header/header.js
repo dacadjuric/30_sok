@@ -3,8 +3,9 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-import Logo from "../logo/logo";
 import useGetDownloadUrl from "../../hooks/use-get-download-url";
+
+import Logo from "../logo/logo";
 
 function Header() {
   const { downloadUrl, isSupported } = useGetDownloadUrl();

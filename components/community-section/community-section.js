@@ -1,16 +1,16 @@
+import DownloadCard from "./download-card/download-card";
+
+import Stars from "../icons/stars";
+import SquiggleDivider from "../icons/squiggle-divider";
+
 import GithubIcon from "../icons/github";
-import ProducthuntIcon from "../icons/producthunt";
-
-import DownloadCard from "./download-card";
-
-import SquigglesDivider from "../icons/squiggle-divider";
-import Stars from "../icons/Stars";
+import ProducthuntIcon from "../icons/product-hunt";
 
 export default function CommunitySection() {
   return (
     <div className="relative min-h-[768px] container mx-auto flex flex-col justify-center items-center px-8">
-      <div className="absolute top-0 rotate-180">
-        <SquigglesDivider width={340} className="top-9 animate-shock" />
+      <div className="absolute -top-9 rotate-180">
+        <SquiggleDivider width={340} className="animate-shock" />
       </div>
       <div className="w-[50%]">
         <h4 className="text-2xl text-center">Trusted by</h4>
