@@ -2,7 +2,6 @@ import DownloadCard from "./download-card/download-card";
 
 import Stars from "../icons/stars";
 import SquiggleDivider from "../icons/squiggle-divider";
-
 import GithubIcon from "../icons/github";
 import ProductHuntIcon from "../icons/product-hunt";
 
@@ -42,7 +41,7 @@ export default function CommunitySection() {
           </a>
         </div>
 
-        <div className="w-80 px-6 py-7 rounded-lg bg-[#17191f] transition transform hover:scale-105">
+        <div className="w-80 px-6 py-7 rounded-lg bg-cardsBackground transition transform hover:scale-105">
           <a
             href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
             target="_blank"

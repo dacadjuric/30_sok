@@ -13,7 +13,8 @@ function DownloadCard(props) {
   const { downloadUrl } = useGetDownloadUrl();
   return (
     <a
-      className="px-6 py-7 w-80 rounded-lg bg-[#17191f] flex flex-col items-center transition transform hover:scale-105"
+      className="px-6 py-7 w-80 rounded-lg bg-cardsBackground flex flex-col items-center transition transform hover:scale-105"
+      target="_blank"
       href={downloadUrl}
       {...props}
     >

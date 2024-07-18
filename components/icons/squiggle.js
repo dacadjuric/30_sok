@@ -1,4 +1,4 @@
-export default function Squiggles({
+export default function Squiggle({
   width,
   height,
   color = "#ffc800",

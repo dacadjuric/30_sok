@@ -3,12 +3,11 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
+import Logo from "../logo/logo";
 import useGetDownloadUrl from "../../hooks/use-get-download-url";
 
-import Logo from "../logo/logo";
-
 function Header() {
-  const { downloadUrl, isSupported } = useGetDownloadUrl();
+  const { downloadUrl } = useGetDownloadUrl();
   return (
     <header className="mx-auto bg-background/50 sticky top-0 left-0 right-0 px-8 backdrop-blur-lg z-10">
       <div className="container mx-auto">
