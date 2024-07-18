@@ -4,7 +4,7 @@ import Stars from "../icons/stars";
 import SquiggleDivider from "../icons/squiggle-divider";
 
 import GithubIcon from "../icons/github";
-import ProducthuntIcon from "../icons/product-hunt";
+import ProductHuntIcon from "../icons/product-hunt";
 
 export default function CommunitySection() {
   return (
@@ -26,7 +26,7 @@ export default function CommunitySection() {
             target="_blank"
             className="flex flex-col items-center"
           >
-            <ProducthuntIcon
+            <ProductHuntIcon
               width={60}
               height={60}
               color="#0e1217"

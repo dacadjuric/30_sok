@@ -1,4 +1,4 @@
-export default function ProducthuntIcon({
+export default function ProductHuntIcon({
   width = 30,
   height = 30,
   color = "#818589",
