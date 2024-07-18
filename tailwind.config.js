@@ -51,6 +51,7 @@ module.exports = {
         footerTextDark: "#818589",
         footerIcons: "#D3D3D3",
         ctaLightColor: "#969da9",
+        cardsBackground: "#17191f",
       },
     },
   },

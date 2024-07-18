@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import cpp from "../../assets/logos/cpp.svg";
 import csharp from "../../assets/logos/csharp.svg";
 import css from "../../assets/logos/css.svg";

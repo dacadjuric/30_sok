@@ -14,6 +14,7 @@ function DownloadButton(props) {
   return (
     <a
       className="mx-24 bg-textLight rounded-lg border-textLight pt-3 pr-5 pb-3 pl-4 flex place-items-center gap-x-2 text-background uppercase"
+      target="_blank"
       href={downloadUrl}
       {...props}
     >
