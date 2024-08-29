@@ -35,11 +35,17 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        float: {
+          "0%": { transform: "translatey(0px)" },
+          "50%": { transform: "translatey(-20px)" },
+          "100%": { transform: "translatey(0px)" },
+        },
       },
       animation: {
         shake: "shake 3s linear infinite",
         shock: "shock 1s linear infinite",
         loop: "loop var(--duration) linear infinite var(--direction)",
+        float: "float 4s linear infinite",
       },
       colors: {
         transparent: "transparent",
