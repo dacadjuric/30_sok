@@ -34,40 +34,76 @@ export default function Footer() {
           <div className="flex flex-row gap-12 text-sm">
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Download</h5>
-              <a href={DOWNLOAD_URLS.chrome}>Chrome extension</a>
-              <a href={DOWNLOAD_URLS.firefox}>Firefox add-on</a>
-              <a href={DOWNLOAD_URLS.edge}>Edge add-on</a>
+              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+                Chrome extension
+              </a>
+              <a href={DOWNLOAD_URLS.firefox} target="_blank">
+                Firefox add-on
+              </a>
+              <a href={DOWNLOAD_URLS.edge} target="_blank">
+                Edge add-on
+              </a>
               {/* <a href={DOWNLOAD_URLS.chrome}>Opera add-on</a> */}
-              <a href={DOWNLOAD_URLS.chrome}>Brave extension</a>
-              <a href={DOWNLOAD_URLS.chrome}>Arc extension</a>
+              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+                Brave extension
+              </a>
+              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+                Arc extension
+              </a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Community</h5>
-              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge">
+              <a
+                href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
+                target="_blank"
+              >
                 Github
               </a>
-              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues">
+              <a
+                href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues"
+                target="_blank"
+              >
                 Feature requests
               </a>
-              <a href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues">
+              <a
+                href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues"
+                target="_blank"
+              >
                 Report Issues
               </a>
-              <a href="https://30-seconds-of-knowledge.creator-spring.com/">
+              <a
+                href="https://30-seconds-of-knowledge.creator-spring.com/"
+                target="_blank"
+              >
                 Swag store
               </a>
               <a href="https://30secondsofknowledge.gumroad.com/l/thhgl">
-                One-Time Donation
+                target="_blank" One-Time Donation
               </a>
-              <a href="https://30secondsofknowledge.gumroad.com/l/ifguu">
+              <a
+                href="https://30secondsofknowledge.gumroad.com/l/ifguu"
+                target="_blank"
+              >
                 Recurring Donation
               </a>
-              <a href="http://eepurl.com/giRHzP">Newsletter</a>
+              <a href="http://eepurl.com/giRHzP" target="_blank">
+                Newsletter
+              </a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Product</h5>
-              <Link href="/">About Us</Link>
-              <Link href="mailto:office@30secondsofknowledge.com">Contact</Link>
-              <Link href="/">Media kit</Link>
+              <Link href="/" target="_blank">
+                About Us
+              </Link>
+              <Link
+                href="mailto:office@30secondsofknowledge.com"
+                target="_blank"
+              >
+                Contact
+              </Link>
+              <Link href="/" target="_blank">
+                Media kit
+              </Link>
             </div>
           </div>
         </div>
@@ -86,19 +122,19 @@ export default function Footer() {
               </Link>
             </p>
             <div className="flex flex-row space-x-2.5 text-footerTextDark">
-              <Link href="/">
+              <Link href="/" target="_blank">
                 <FacebookIcon width={32} height={32} />
               </Link>
-              <Link href="/">
+              <Link href="/" target="_blank">
                 <InstagramIcon width={32} height={32} />
               </Link>
-              <Link href="/">
+              <Link href="/" target="_blank">
                 <TwitterIcon width={32} height={32} />
               </Link>
-              <Link href="/">
+              <Link href="/" target="_blank">
                 <GithubIcon width={32} height={32} />
               </Link>
-              <Link href="/">
+              <Link href="/" target="_blank">
                 <LinkedInIcon width={32} height={32} />
               </Link>
             </div>
