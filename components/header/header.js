@@ -20,6 +20,7 @@ function Header() {
           <nav className="flex">
             <div className="grid content-center">
               <a
+                target="_blank"
                 className="text-background font-roboto font-semibold uppercase text-sm rounded-lg px-4 py-3 bg-yellow"
                 href={downloadUrl}
               >
