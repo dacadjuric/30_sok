@@ -1,6 +1,6 @@
 import DownloadCard from "./download-card/download-card";
 
-import Stars from "../icons/stars";
+import ReviewStars from "../icons/review-stars";
 import SquiggleDivider from "../icons/squiggle-divider";
 import GithubIcon from "../icons/github";
 import ProductHuntIcon from "../icons/product-hunt";
@@ -59,7 +59,7 @@ export default function CommunitySection() {
         </div>
       </div>
       <div className="flex items-center">
-        <Stars width={320} className="rotate-180" />
+        <ReviewStars width={320} className="rotate-180" />
       </div>
     </div>
   );

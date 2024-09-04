@@ -1,4 +1,9 @@
-export default function Stars({ width, height, color = "#ffc800", ...rest }) {
+export default function ReviewStars({
+  width,
+  height,
+  color = "#ffc800",
+  ...rest
+}) {
   return (
     <svg
       viewBox="0 0 402 106"
