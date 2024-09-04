@@ -1,5 +1,6 @@
 import { Roboto_Flex, Teko } from "next/font/google";
 
+import Loader from "../../components/loader/loader";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
         className={`${teko.variable} ${roboto.variable}`}
       >
+        <Loader />
         <Header />
         {children}
         <Footer />

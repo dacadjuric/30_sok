@@ -9,7 +9,7 @@ import useGetDownloadUrl from "../../hooks/use-get-download-url";
 function Header() {
   const { downloadUrl } = useGetDownloadUrl();
   return (
-    <header className="mx-auto bg-background/50 sticky top-0 left-0 right-0 px-8 backdrop-blur-lg z-10">
+    <header className="mx-auto bg-background/50 sticky top-0 left-0 right-0 px-8 backdrop-blur-lg z-50">
       <div className="container mx-auto">
         <div className="flex place-content-between py-4">
           <div className="grid content-center">

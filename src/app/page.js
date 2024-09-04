@@ -1,6 +1,7 @@
 import CommunitySection from "../../components/community-section/community-section";
 import LandingPage from "../../components/landing/landing";
 import SnippetsPage from "../../components/snippets/snippets";
+import SupportSection from "../../components/support-section/support-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <LandingPage />
       <SnippetsPage />
       <CommunitySection />
+      <SupportSection />
     </main>
   );
 }

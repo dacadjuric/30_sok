@@ -55,6 +55,12 @@ export default function Footer() {
               <a href="https://30-seconds-of-knowledge.creator-spring.com/">
                 Swag store
               </a>
+              <a href="https://30secondsofknowledge.gumroad.com/l/thhgl">
+                One-Time Donation
+              </a>
+              <a href="https://30secondsofknowledge.gumroad.com/l/ifguu">
+                Recurring Donation
+              </a>
               <a href="http://eepurl.com/giRHzP">Newsletter</a>
             </div>
             <div className="flex flex-col gap-1.5">
