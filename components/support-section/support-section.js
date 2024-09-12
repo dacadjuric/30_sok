@@ -16,7 +16,7 @@ export default function SupportSection() {
             />
           </div>
           <div className="flex flex-col w-1/2 items-end">
-            <h1 className="text-6xl">SUPPORT US!</h1>
+            <h1 className="text-6xl font-extrabold">SUPPORT US!</h1>
             <span className="text-right">
               <b className="text-yellow">Your support means a lot</b>! If you
               enjoy <b className="text-yellow">30 Seconds of Knowledge</b>
