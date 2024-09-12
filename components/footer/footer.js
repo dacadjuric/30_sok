@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
-import TwitterIcon from "../icons/twitter";
 import GithubIcon from "../icons/github";
 import LinkedInIcon from "../icons/linkedin";
 import Logo from "../logo/logo";
@@ -34,20 +33,40 @@ export default function Footer() {
           <div className="flex flex-row gap-12 text-sm">
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Download</h5>
-              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+              <a
+                href={DOWNLOAD_URLS.chrome}
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Chrome extension
               </a>
-              <a href={DOWNLOAD_URLS.firefox} target="_blank">
+              <a
+                href={DOWNLOAD_URLS.firefox}
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Firefox add-on
               </a>
-              <a href={DOWNLOAD_URLS.edge} target="_blank">
+              <a
+                href={DOWNLOAD_URLS.edge}
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Edge add-on
               </a>
               {/* <a href={DOWNLOAD_URLS.chrome}>Opera add-on</a> */}
-              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+              <a
+                href={DOWNLOAD_URLS.chrome}
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Brave extension
               </a>
-              <a href={DOWNLOAD_URLS.chrome} target="_blank">
+              <a
+                href={DOWNLOAD_URLS.chrome}
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Arc extension
               </a>
             </div>
@@ -56,49 +75,72 @@ export default function Footer() {
               <a
                 href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
                 target="_blank"
+                className="opacity-80 hover:opacity-100"
               >
                 Github
               </a>
               <a
                 href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues"
                 target="_blank"
+                className="opacity-80 hover:opacity-100"
               >
                 Feature requests
               </a>
               <a
                 href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge/issues"
                 target="_blank"
+                className="opacity-80 hover:opacity-100"
               >
                 Report Issues
               </a>
               <a
                 href="https://30-seconds-of-knowledge.creator-spring.com/"
                 target="_blank"
+                className="opacity-80 hover:opacity-100"
               >
                 Swag store
               </a>
-              <a href="https://30secondsofknowledge.gumroad.com/l/thhgl">
+              <a
+                href="https://30secondsofknowledge.gumroad.com/l/thhgl"
+                className="opacity-80 hover:opacity-100"
+              >
                 One-Time Donation
               </a>
-              <a href="https://30secondsofknowledge.gumroad.com/l/ifguu">
+              <a
+                href="https://30secondsofknowledge.gumroad.com/l/ifguu"
+                className="opacity-80 hover:opacity-100"
+              >
                 Recurring Donation
               </a>
-              <a href="http://eepurl.com/giRHzP" target="_blank">
+              <a
+                href="http://eepurl.com/giRHzP"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Newsletter
               </a>
             </div>
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Product</h5>
-              <Link href="/" target="_blank">
+              <Link
+                href="/"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 About Us
               </Link>
               <Link
                 href="mailto:office@30secondsofknowledge.com"
                 target="_blank"
+                className="opacity-80 hover:opacity-100"
               >
                 Contact
               </Link>
-              <Link href="/" target="_blank">
+              <Link
+                href="/"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 Media kit
               </Link>
             </div>
@@ -119,19 +161,32 @@ export default function Footer() {
               </Link>
             </p>
             <div className="flex flex-row space-x-2.5 text-footerTextDark">
-              <Link href="/" target="_blank">
+              <Link
+                href="https://www.facebook.com/30secondsofknowledge"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 <FacebookIcon width={32} height={32} />
               </Link>
-              <Link href="/" target="_blank">
+              <Link
+                href="https://www.instagram.com/30secondsofknowledge?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 <InstagramIcon width={32} height={32} />
               </Link>
-              <Link href="/" target="_blank">
-                <TwitterIcon width={32} height={32} />
-              </Link>
-              <Link href="/" target="_blank">
+              <Link
+                href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 <GithubIcon width={32} height={32} />
               </Link>
-              <Link href="/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/company/30-seconds-of-knowledge/"
+                target="_blank"
+                className="opacity-80 hover:opacity-100"
+              >
                 <LinkedInIcon width={32} height={32} />
               </Link>
             </div>
