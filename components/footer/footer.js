@@ -78,12 +78,9 @@ export default function Footer() {
                 Swag store
               </a>
               <a href="https://30secondsofknowledge.gumroad.com/l/thhgl">
-                target="_blank" One-Time Donation
+                One-Time Donation
               </a>
-              <a
-                href="https://30secondsofknowledge.gumroad.com/l/ifguu"
-                target="_blank"
-              >
+              <a href="https://30secondsofknowledge.gumroad.com/l/ifguu">
                 Recurring Donation
               </a>
               <a href="http://eepurl.com/giRHzP" target="_blank">
