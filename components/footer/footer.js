@@ -11,10 +11,10 @@ import { DOWNLOAD_URLS } from "../../constants/download-urls";
 export default function Footer() {
   let year = new Date().getFullYear();
   return (
-    <footer className="mx-auto border-t-2 border-yellow bg-background text-text px-8 relative z-10">
-      <div className="container mx-auto">
-        <div className="flex flex-row justify-between py-12">
-          <div className="flex flex-col justify-start text-sm mr-12">
+    <footer className="mx-auto mt-6 border-t-2 border-yellow bg-background text-text px-8 relative z-10">
+      <div className="container mx-auto overflow-hidden">
+        <div className="flex flex-col sm:flex-row justify-between py-12">
+          <div className="flex flex-col justify-center sm:justify-start text-sm mr-12 mb-4 sm:mb-0">
             <Logo width={96} className="mb-4 fill-textLight" />
             <p>
               <b>30 Seconds of Knowledge</b> is created, written and maintained
@@ -30,7 +30,7 @@ export default function Footer() {
               and powered by Open Source projects.
             </p>
           </div>
-          <div className="flex flex-row gap-12 text-sm">
+          <div className="flex flex-row flex-wrap mt-6 sm:mt-0 sm:flex-nowrap gap-6 sm:gap-12 text-sm">
             <div className="flex flex-col gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Download</h5>
               <a
@@ -70,7 +70,7 @@ export default function Footer() {
                 Arc extension
               </a>
             </div>
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col justify-end gap-1.5">
               <h5 className="text-yellow font-semibold text-lg">Community</h5>
               <a
                 href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
         <hr className="h-px" />
         <div className="py-12 text-footerTextDark">
-          <div className="flex items-center flex-row justify-between">
+          <div className="flex items-center flex-col sm:flex-row justify-between">
             <p>
               &copy;{year} &nbsp;
               <Link
