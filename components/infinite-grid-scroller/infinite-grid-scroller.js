@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { useWindowSize } from "@uidotdev/usehooks";
+import dynamic from "next/dynamic";
 
 import cpp from "../../assets/logos/cpp.svg";
 import csharp from "../../assets/logos/csharp.svg";
@@ -108,9 +108,9 @@ function Tag({ text, logo }) {
   );
 }
 
-export default function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
+function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
   return (
-    <div className="relative w-3/5 sm:w-[50%] flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden top-6">
+    <div className="relative w-11/12 sm:w-[50%] flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden top-6">
       {[...new Array(rows)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
@@ -124,7 +124,10 @@ export default function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
             ))}
         </InfiniteLoopSlider>
       ))}
-      <div className="pointer-events-none bg-gradient-to-r from-background via-transparent via-[percentage:30%_50%] to-background absolute inset-0" />
+      <div className="pointer-events-none bg-gradient-to-r from-background via-transparent via-[percentage:30%_70%] to-background absolute inset-0" />
     </div>
   );
 }
+export default dynamic(() => Promise.resolve(InfiniteGridScroller), {
+  ssr: false,
+});

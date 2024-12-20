@@ -7,8 +7,8 @@ import ProductHuntIcon from "../icons/product-hunt";
 
 export default function CommunitySection() {
   return (
-    <div className="relative min-h-[100vh] sm:min-h-[768px] container mx-auto flex flex-col justify-center items-center px-8">
-      <div className="absolute -top-12 sm:-top-20 md:-top-16 rotate-180 ">
+    <div className="relative min-h-[100vh] sm:min-h-[768px] container mx-auto flex flex-col justify-center items-center px-8 pt-12 sm:pt-20">
+      <div className="absolute -top-5 sm:-top-9 md:-top-9 rotate-180 ">
         <SquiggleDivider
           width={340}
           className="animate-shock w-[200px] sm:w-full"
