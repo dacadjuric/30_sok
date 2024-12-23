@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import dynamic from "next/dynamic";
+
 import cpp from "../../assets/logos/cpp.svg";
 import csharp from "../../assets/logos/csharp.svg";
 import css from "../../assets/logos/css.svg";
@@ -75,7 +77,7 @@ const obj = {
 };
 
 const DURATION = 35000;
-const ROWS = 5;
+const DEFAULT_ROWS = 5;
 const TAGS_PER_ROW = 10;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -106,10 +108,10 @@ function Tag({ text, logo }) {
   );
 }
 
-export default function InfiniteGridScroller() {
+function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
   return (
-    <div className="relative w-[50%] flex flex-shrink-0 flex-col gap-6 overflow-hidden">
-      {[...new Array(ROWS)].map((_, i) => (
+    <div className="relative w-11/12 sm:w-[50%] flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden top-6">
+      {[...new Array(rows)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
           duration={random(DURATION - 10000, DURATION + 10000)}
@@ -126,3 +128,6 @@ export default function InfiniteGridScroller() {
     </div>
   );
 }
+export default dynamic(() => Promise.resolve(InfiniteGridScroller), {
+  ssr: false,
+});
