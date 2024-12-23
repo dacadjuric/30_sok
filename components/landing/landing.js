@@ -60,9 +60,12 @@ export default function LandingPage() {
           onMouseEnter={() => setIsTransform(true)}
           onMouseLeave={() => setIsTransform(false)}
         />
-        <div className="absolute -bottom-[276px] sm:top-64 sm:-left-4 sm:-bottom-[110px] rotate-90 sm:rotate-[140deg]">
+        <div className="absolute hidden sm:inline top-64 -left-4 -bottom-[110px] rotate-[140deg]">
           <SquigglesX height={160} className="animate-shock sm:flex" />
         </div>
+      </div>
+      <div className="absolute inline sm:hidden mx-auto inset-x-1/2 -bottom-11 rotate-90 ">
+        <SquigglesX height={160} className="animate-shock sm:flex" />
       </div>
     </div>
   );
