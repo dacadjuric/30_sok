@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+
 import useGetDownloadUrl from "../../hooks/use-get-download-url";
 
 import chromeIcon from "../../assets/chrome.svg";
