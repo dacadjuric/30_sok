@@ -101,6 +101,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Script
+        id="jsonLD"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
       />
