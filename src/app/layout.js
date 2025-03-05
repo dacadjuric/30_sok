@@ -5,12 +5,16 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
 import "./globals.css";
+import Script from "next/script";
 
 const roboto = Roboto_Flex({ subsets: ["latin"], variable: "--font-roboto" });
 const teko = Teko({ subsets: ["latin"], variable: "--font-teko" });
 
 export const metadata = {
   metadataBase: new URL("https://www.30secondsofknowledge.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | 30 Seconds Of Knowledge",
     default: "30 Seconds Of Knowledge",
@@ -28,6 +32,11 @@ export const metadata = {
     "JS",
     "Ruby",
     "JavaScript",
+    "code snippets",
+    "web development",
+    "programming",
+    "frontend",
+    "backend",
   ],
   referrer: "strict-origin-when-cross-origin",
   siteName: "30 Seconds Of Knowledge",
@@ -45,10 +54,6 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
     },
   },
   openGraph: {
@@ -80,9 +85,25 @@ export const metadata = {
   },
 };
 
+const jsonLD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  image: "/schema.jpg",
+  name: "30 Seconds of Knowledge",
+  url: "https://www.30secondsofknowledge.com",
+  author: {
+    "@type": "Person",
+    name: "Danijela Đurić Petrović",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
+      />
       <body
         suppressHydrationWarning={true}
         className={`${teko.variable} ${roboto.variable}`}
