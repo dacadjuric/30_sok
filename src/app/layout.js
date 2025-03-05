@@ -34,9 +34,9 @@ export const metadata = {
   locale: "en_US",
   type: "website",
   icons: {
-    icon: "./assets/metaImages/icons/favicon.ico",
-    shortcut: "./assets/metaImages/icon.png",
-    apple: "./assets/metaImages/icons/apple-touch-icon.png",
+    icon: "./metaImages/icons/favicon.ico",
+    shortcut: "./metaImages/icon.png",
+    apple: "./metaImages/icons/apple-touch-icon.png",
   },
   robots: {
     index: true,
@@ -61,14 +61,14 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "../../assets/open_graph.jpg",
+        url: "./metaImages/open_graph.jpg",
         alt: "30 Seconds Of Knowledge photo",
         width: 800,
         height: 600,
         type: "image/jpg",
       },
       {
-        url: "./assets/schema.jpg",
+        url: "./metaImages/schema.jpg",
         alt: "30 Seconds Of Knowledge photo",
         width: 1800,
         height: 1600,
@@ -82,7 +82,7 @@ export const metadata = {
     title: "30 Seconds of Knowledge",
     description:
       "Learn to code faster! Get bite-sized coding knowledge with high-quality snippets on every new tab. Master JavaScript, Python, React, and more.",
-    image: "./assets/twitter.jpg",
+    image: "./metaImages/twitter.jpg",
     imageAlt: "Banner image for the website 30 Seconds Of Knowledge with logo",
   },
 };
