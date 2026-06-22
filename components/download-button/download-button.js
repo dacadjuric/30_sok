@@ -14,36 +14,24 @@ function DownloadButton(props) {
 
   return (
     <a
-      className="mx-16 sm:mx-24 sm:max-w-[320px] bg-textLight rounded-lg border-textLight pt-3 pr-5 pb-3 pl-4 flex place-items-center sm:gap-x-2 text-background uppercase"
+      className="group inline-flex w-fit items-center gap-3 rounded-lg bg-yellow px-5 py-3 font-mono font-bold text-background transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-yellow/20"
       target="_blank"
       href={downloadUrl}
       {...props}
     >
-      <span className="hidden sm:visible sm:flex items-center">
-        <Image
-          src={firefoxIcon}
-          alt="Firefox icon"
-          className="size-8 -mr-3 sm:-mr-6 sm:size-12"
-        />
-        <Image
-          src={edgeIcon}
-          alt="Edge icon"
-          className="size-8 -mr-3 sm:-mr-6  sm:size-12"
-        />
-        <Image
-          src={chromeIcon}
-          alt="Chrome icon"
-          className="size-8 sm:size-12"
-        />
+      <span className="flex flex-col leading-tight">
+        <span className="text-base sm:text-lg whitespace-nowrap">
+          <span className="mr-1.5">▸</span>install — it&apos;s free
+        </span>
+        <span className="text-xs font-medium text-background/70 whitespace-nowrap">
+          chrome · firefox · edge
+        </span>
       </span>
-      <div className="flex flex-col">
-        <span className="text-base leading-4 sm:text-lg sm:leading-6 font-bold">
-          keep your edge{" "}
-        </span>
-        <span className="text-sm leading-4 font-medium text-ctaLightColor">
-          it's free
-        </span>
-      </div>
+      <span className="flex items-center shrink-0 pl-1">
+        <Image src={firefoxIcon} alt="Firefox" className="-mr-2.5 size-6" />
+        <Image src={edgeIcon} alt="Edge" className="-mr-2.5 size-6" />
+        <Image src={chromeIcon} alt="Chrome" className="size-6" />
+      </span>
     </a>
   );
 }

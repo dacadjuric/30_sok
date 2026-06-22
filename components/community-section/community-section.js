@@ -1,74 +1,88 @@
 import DownloadCard from "./download-card/download-card";
+import EditorWindow from "../editor/editor-window";
+import Reveal from "../editor/reveal";
 
-import ReviewStars from "../icons/review-stars";
-import SquiggleDivider from "../icons/squiggle-divider";
+import StarRating from "../icons/stars";
 import GithubIcon from "../icons/github";
 import ProductHuntIcon from "../icons/product-hunt";
 
+const log = [
+  { cmd: "sok stats --community" },
+  { out: "25,000+ developers who refuse to rust" },
+  { out: "1,000+ GitHub stars" },
+  { out: "#2 Product of the Day · Product Hunt" },
+  { out: "★★★★★ featured on the Chrome Web Store" },
+];
+
 export default function CommunitySection() {
   return (
-    <div className="relative min-h-[100vh] sm:min-h-[768px] container mx-auto flex flex-col justify-center items-center px-8 pt-12 sm:pt-20">
-      <div className="absolute -top-5 sm:-top-9 md:-top-9 rotate-180 ">
-        <SquiggleDivider
-          width={340}
-          className="animate-shock w-[200px] sm:w-full"
-        />
-      </div>
-      <div className="sm:w-[50%]">
-        <h4 className="text-lg sm:text-2xl text-center">Sharp minds, sharp tools</h4>
-        <h1 className="text-5xl sm:text-6xl font-extrabold text-center">
-          25K+ DEVELOPERS
-        </h1>
-        <p className="text-sm sm:text-base text-center text-footerTextDark">
-          who refuse to rust
-        </p>
-      </div>
+    <section
+      id="community"
+      className="relative container mx-auto flex flex-col justify-center items-center px-6 sm:px-8 py-14 sm:py-16"
+    >
+      <Reveal className="w-full max-w-3xl text-center mb-10">
+        <p className="font-mono text-sm text-comment">{"// "}sharp minds, sharp tools</p>
+        <h2 className="font-mono text-5xl sm:text-6xl font-bold tracking-tight mt-2">
+          25K<span className="text-yellow">+</span> developers
+        </h2>
+        <p className="prose-sans text-comment mt-2">who refuse to rust</p>
+      </Reveal>
 
-      <div className="gap-6 sm:gap-12 flex flex-row flex-nowrap max-lg:flex-col justify-start text-center mt-9 mb-11">
+      <Reveal className="w-full max-w-3xl" delay={120}>
+        <EditorWindow filename="community.log" right="$ tail -f" bodyClassName="py-4 px-4 sm:px-5 font-mono text-sm sm:text-[15px] leading-7">
+          {log.map((l, i) =>
+            l.cmd ? (
+              <p key={i} className="text-textLight">
+                <span className="text-yellow">$</span> {l.cmd}
+              </p>
+            ) : (
+              <p key={i} className="text-comment">
+                <span className="text-yellow">→</span>{" "}
+                <span className="text-textLight">{l.out}</span>
+              </p>
+            )
+          )}
+          <p className="text-comment">
+            <span className="animate-blink text-yellow">▋</span>
+          </p>
+        </EditorWindow>
+      </Reveal>
+
+      <Reveal
+        className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-5 sm:gap-6 mt-10 w-full max-w-3xl"
+        delay={200}
+      >
         <DownloadCard />
 
-        <div className="w-80 px-6 py-7 rounded-lg bg-yellow transition transform hover:scale-105">
-          <a
-            href="https://www.producthunt.com/products/css-galore#30-seconds-of-knowledge"
-            target="_blank"
-            className="flex flex-col items-center"
-          >
-            <ProductHuntIcon
-              width={60}
-              height={60}
-              color="#0e1217"
-              className="mb-1.5"
-            />
+        <a
+          href="https://www.producthunt.com/products/css-galore#30-seconds-of-knowledge"
+          target="_blank"
+          className="flex-1 min-w-[240px] px-6 py-7 rounded-lg bg-panel border border-line hover:border-yellow/40 transition-colors flex flex-col items-center"
+        >
+          <ProductHuntIcon width={48} height={48} color="#ffc800" className="mb-3" />
+          <h3 className="text-xl">
+            <b className="text-yellow">#2</b> Product of the Day
+          </h3>
+          <p className="text-sm text-comment mt-1">Product Hunt</p>
+        </a>
 
-            <h5 className="text-2xl text-nowrap text-background">
-              <b>#2</b> product of the day
-            </h5>
-            <p className="text-sm text-background">
-              <b>Product Hunt</b>
-            </p>
-          </a>
-        </div>
+        <a
+          href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
+          target="_blank"
+          className="flex-1 min-w-[240px] px-6 py-7 rounded-lg bg-panel border border-line hover:border-yellow/40 transition-colors flex flex-col items-center"
+        >
+          <GithubIcon width={42} height={42} color="#fff" className="mb-3" />
+          <h3 className="text-xl">
+            <b className="text-yellow">1,000+</b> GitHub stars
+          </h3>
+          <p className="text-sm text-comment mt-1">30_seconds_of_knowledge</p>
+        </a>
+      </Reveal>
 
-        <div className="w-80 px-6 py-7 rounded-lg bg-cardsBackground transition transform hover:scale-105">
-          <a
-            href="https://github.com/petrovicstefanrs/30_seconds_of_knowledge"
-            target="_blank"
-            className="flex flex-col items-center"
-          >
-            <GithubIcon
-              width={48}
-              height={48}
-              color="#fff"
-              className="text-center mb-4"
-            />
-            <h5 className="text-2xl text-nowrap">1,000+ Github stars</h5>
-            <p className="text-sm">petrovicstefan/30_seconds_of_knowledge</p>
-          </a>
-        </div>
-      </div>
-      <div className="flex items-center max-lg:pb-20">
-        <ReviewStars width={320} className="rotate-180" />
-      </div>
-    </div>
+      <Reveal className="mt-10 flex items-center gap-3" delay={260}>
+        <StarRating size={30} />
+        <span className="font-mono text-sm text-comment">5.0 average</span>
+      </Reveal>
+    </section>
   );
 }

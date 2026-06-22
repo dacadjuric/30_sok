@@ -6,7 +6,7 @@ import SupportSection from "../../components/support-section/support-section";
 
 export default function Home() {
   return (
-    <main className="bg-background text-text">
+    <main className="bg-background text-text scroll-smooth">
       <LandingPage />
       <AtrophySection />
       <SnippetsPage />

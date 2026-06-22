@@ -11,8 +11,18 @@ import { DOWNLOAD_URLS } from "../../constants/download-urls";
 export default function Footer() {
   let year = new Date().getFullYear();
   return (
-    <footer className="mx-auto mt-6 border-t-2 border-yellow bg-background text-text px-8 relative z-10">
-      <div className="container mx-auto overflow-hidden">
+    <footer className="mx-auto mt-6 bg-background text-text relative z-10">
+      {/* editor status bar */}
+      <div className="bg-yellow text-background font-mono text-xs">
+        <div className="container mx-auto px-8 flex items-center gap-4 sm:gap-6 py-1.5 overflow-x-auto whitespace-nowrap">
+          <span className="font-bold">⎇ main</span>
+          <span>UTF-8</span>
+          <span>LF</span>
+          <span className="hidden sm:inline">1500+ snippets</span>
+          <span className="ml-auto">★ 25K+ devs · stay sharp</span>
+        </div>
+      </div>
+      <div className="container mx-auto overflow-hidden px-8">
         <div className="flex flex-col sm:flex-row justify-between py-12">
           <div className="flex flex-col justify-center sm:justify-start text-sm mr-12 mb-4 sm:mb-0">
             <Logo width={96} className="mb-4 fill-textLight" />

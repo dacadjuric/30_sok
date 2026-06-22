@@ -1,4 +1,4 @@
-import { Roboto_Flex, Teko } from "next/font/google";
+import { Roboto_Flex, JetBrains_Mono } from "next/font/google";
 
 import Loader from "../../components/loader/loader";
 import Header from "../../components/header/header";
@@ -8,7 +8,7 @@ import "./globals.css";
 import Script from "next/script";
 
 const roboto = Roboto_Flex({ subsets: ["latin"], variable: "--font-roboto" });
-const teko = Teko({ subsets: ["latin"], variable: "--font-teko" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = {
   metadataBase: new URL("https://www.30secondsofknowledge.com"),
@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
       />
       <body
         suppressHydrationWarning={true}
-        className={`${teko.variable} ${roboto.variable}`}
+        className={`${mono.variable} ${roboto.variable} font-mono`}
       >
         <Loader />
         <Header />
