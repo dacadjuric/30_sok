@@ -10,15 +10,18 @@ export default function SnippetsPage() {
     <div className="relative min-h-[100vh] sm:min-h-[768px] container mx-auto flex flex-col sm:flex-row justify-center items-center px-8">
       <div className="sm:w-[50%] mb-3">
         <h2 className="text-5xl font-bold text-center sm:text-6xl sm:font-extrabold sm:text-left">
-          1500+ SNIPPETS
+          1500+ REPS
         </h2>
         <div className="text-sm text-center sm:text-base sm:text-left">
-          In <span className="font-bold text-yellow">14 Snippet Libraries</span>{" "}
-          consisted of{" "}
-          <span className="font-bold text-yellow">Programming Languages</span>,
+          One snippet per new tab.{" "}
+          <span className="font-bold text-yellow">One rep for your brain</span>.
           <br />
-          popular <span className="font-bold text-yellow">Frameworks</span>, and
-          <span className="font-bold text-yellow"> Interview Questions</span>,
+          Pulled from{" "}
+          <span className="font-bold text-yellow">14 libraries</span> of
+          <br />
+          <span className="font-bold text-yellow">languages</span>,{" "}
+          <span className="font-bold text-yellow">frameworks</span>, and{" "}
+          <span className="font-bold text-yellow">interview questions</span>,
           <br />
           with more to come soon!
         </div>

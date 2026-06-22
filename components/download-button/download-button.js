@@ -38,7 +38,7 @@ function DownloadButton(props) {
       </span>
       <div className="flex flex-col">
         <span className="text-base leading-4 sm:text-lg sm:leading-6 font-bold">
-          start learning{" "}
+          keep your edge{" "}
         </span>
         <span className="text-sm leading-4 font-medium text-ctaLightColor">
           it's free

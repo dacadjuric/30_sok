@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function SupportSection() {
   return (
-    <div className="bg-gradient-to-b from-[#1F194D]">
+    <div className="bg-gradient-to-b from-[#1F194D] overflow-hidden">
       <div className="relative min-h-[100vh] sm:min-h-[960px] container mx-auto flex flex-col justify-center items-center px-8">
         <div className="sm:flex sm:z-10">
           <div className="invisible sm:visible sm:w-1/2 flex items-start justify-center">
@@ -14,10 +14,10 @@ export default function SupportSection() {
           <div className="flex flex-col items-center w-full mt-8 sm:mt-0 sm:w-1/2 sm:items-end">
             <h1 className="text-5xl sm:text-6xl font-extrabold">SUPPORT US!</h1>
             <span className="text-center sm:text-right">
-              <b className="text-yellow">Your support means a lot</b>! If you
-              enjoy <b className="text-yellow">30 Seconds of Knowledge</b>
+              <b className="text-yellow">Help us keep brains sharp</b>! If{" "}
+              <b className="text-yellow">30 Seconds of Knowledge</b> keeps
               <br />
-              and want to support its growth, consider{" "}
+              your edge from dulling, consider{" "}
               <b className="text-yellow">making a small donation</b>
             </span>
             <a

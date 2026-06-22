@@ -20,14 +20,14 @@ export default function LandingPage() {
             isTransform ? "bg-text-top-end" : "bg-text-start"
           }`}
         >
-          seconds
+          brain
         </span>
         <span
           className={`font-black opacity-5 uppercase text-clip ${
             isTransform ? "bg-text-bottom-end" : "bg-text-start"
           }`}
         >
-          knowledge
+          rot
         </span>
       </div>
 
@@ -36,24 +36,23 @@ export default function LandingPage() {
           width={140}
           className="absolute hidden sm:flex -top-[104px] sm:-right-[44px] rotate-[140deg] animate-shake"
         />
-        <h1 className="text-6xl leading-5 sm:text-[100px] sm:leading-[50px] uppercase font-bold">
-          30 seconds <br />
-          <span className="text-4xl sm:text-6xl leading-normal whitespace-nowrap">
-            of knowledge
-          </span>
+        <span className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-[0.2em] uppercase font-bold text-yellow bg-yellow/10 border border-yellow/30 rounded-full px-4 py-1.5">
+          <span className="size-1.5 rounded-full bg-yellow animate-pulse"></span>
+          30 Seconds of Knowledge
+        </span>
+        <h1 className="text-4xl leading-[0.9] sm:text-[64px] sm:leading-[0.86] uppercase font-bold max-w-[16ch]">
+          Don&apos;t let your <span className="text-yellow">engineering brain</span> rot in the age of AI
         </h1>
-        <div className="text-sm">
+        <div className="text-sm sm:text-base max-w-[52ch]">
           <span className="inline sm:block">
-            Become a <b className="text-yellow">better Developer</b>, one
-            <b className="text-yellow"> New Tab</b> at a time.
+            AI writes the code. You <b className="text-yellow">forget how it works</b>.
           </span>{" "}
           <span className="inline sm:block">
-            Get a random code snippet, from
-            <b className="text-yellow"> 14 availabe categories</b>, &nbsp;
+            Every new tab, read one real code snippet and
+            <b className="text-yellow"> stay sharp</b>
           </span>
           <span className="inline sm:block">
-            that you can read and understand in
-            <b className="text-yellow"> 30 seconds or less</b>.
+            &mdash; in <b className="text-yellow">30 seconds or less</b>.
           </span>
         </div>
         <DownloadButton

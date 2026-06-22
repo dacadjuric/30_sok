@@ -15,10 +15,13 @@ export default function CommunitySection() {
         />
       </div>
       <div className="sm:w-[50%]">
-        <h4 className="text-lg sm:text-2xl text-center">Trusted by</h4>
+        <h4 className="text-lg sm:text-2xl text-center">Sharp minds, sharp tools</h4>
         <h1 className="text-5xl sm:text-6xl font-extrabold text-center">
           25K+ DEVELOPERS
         </h1>
+        <p className="text-sm sm:text-base text-center text-footerTextDark">
+          who refuse to rust
+        </p>
       </div>
 
       <div className="gap-6 sm:gap-12 flex flex-row flex-nowrap max-lg:flex-col justify-start text-center mt-9 mb-11">
