@@ -21,7 +21,7 @@ function DownloadButton(props) {
     >
       <span className="flex flex-col leading-tight">
         <span className="text-base sm:text-lg whitespace-nowrap">
-          <span className="mr-1.5">▸</span>install — it&apos;s free
+          <span className="mr-1.5">▸</span>install - it&apos;s free
         </span>
         <span className="text-xs font-medium text-background/70 whitespace-nowrap">
           chrome · firefox · edge

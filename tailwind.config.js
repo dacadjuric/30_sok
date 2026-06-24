@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-roboto)", ...defaultTheme.fontFamily.sans],
         mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
+        display: ["var(--font-teko)", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         loop: {
@@ -48,7 +49,7 @@ module.exports = {
         gutter: "#13161c",
         line: "#23262e",
         comment: "#5c6370",
-        // code block — purple, matching the real extension
+        // code block - purple, matching the real extension
         codeBg: "#322c63",
         codeText: "#e6e4f3",
         codeComment: "#a09bce",

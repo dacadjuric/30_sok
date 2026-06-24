@@ -1,4 +1,4 @@
-# 30 Seconds of Knowledge — IDE Landing Redesign
+# 30 Seconds of Knowledge - IDE Landing Redesign
 
 **Date:** 2026-06-22
 **Status:** Approved
@@ -10,8 +10,8 @@ The product hijacks the browser new-tab and turns it into a code editor. So the
 landing page **is a living IDE**. Not "a dark page with a yellow accent" (generic),
 but a real editor environment: window chrome, line-number gutter, file tabs,
 syntax highlighting, a blinking cursor, terminal output, and a `git diff`. Each
-section is a "file" or "panel" in the workspace. Boldness is spent in one place —
-the IDE concept — everything else stays quiet.
+section is a "file" or "panel" in the workspace. Boldness is spent in one place -
+the IDE concept - everything else stays quiet.
 
 ## Constraints
 
@@ -31,20 +31,20 @@ the IDE concept — everything else stays quiet.
 | Diff minus tint | `rgba(255,80,80,.12)` bg + muted red text (used sparingly) |
 | Diff plus tint | yellow-based `+` markers (stay on-brand) |
 
-- **Type:** `JetBrains Mono` (chrome, code, numbers — the signature) + `Roboto Flex`
+- **Type:** `JetBrains Mono` (chrome, code, numbers - the signature) + `Roboto Flex`
   retained for long body paragraphs. Teko and squiggle doodles are retired.
 - **Layout:** single dark editor canvas; thin left **activity bar** = section nav +
   scroll progress; bottom **status bar** = footer chrome.
 - **Signature element:** hero "newtab.js" window that types a real snippet with
-  syntax highlighting and a blinking cursor — a direct demo of the product.
+  syntax highlighting and a blinking cursor - a direct demo of the product.
 
 ## New reusable components
 
-- `EditorWindow` — window chrome (traffic-light dots, filename tab), used to frame panels.
-- `CodeBlock` — line-numbered, syntax-highlighted code (tokens via spans, no heavy dep).
-- `TypeLine` / typing hook — client-only typing effect, reduced-motion safe.
-- `StatusBar` — bottom VS-Code-style bar (branch, encoding, socials) → footer.
-- `TerminalLog` — `$ command` + output lines, used in community section.
+- `EditorWindow` - window chrome (traffic-light dots, filename tab), used to frame panels.
+- `CodeBlock` - line-numbered, syntax-highlighted code (tokens via spans, no heavy dep).
+- `TypeLine` / typing hook - client-only typing effect, reduced-motion safe.
+- `StatusBar` - bottom VS-Code-style bar (branch, encoding, socials) → footer.
+- `TerminalLog` - `$ command` + output lines, used in community section.
 
 ## Sections (rebuilt, same messaging)
 

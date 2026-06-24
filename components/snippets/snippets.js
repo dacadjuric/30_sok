@@ -10,9 +10,9 @@ export default function SnippetsPage() {
   return (
     <section
       id="snippets"
-      className="relative container mx-auto flex flex-col lg:flex-row justify-center items-center gap-10 px-6 sm:px-8 py-14 sm:py-16"
+      className="relative container mx-auto flex flex-col sm:flex-row justify-center items-center gap-10 px-6 sm:px-8 py-14 sm:py-16"
     >
-      <Reveal className="lg:w-[46%]">
+      <Reveal className="w-full sm:w-1/2 sm:min-w-0">
         <p className="font-mono text-sm text-comment">$ ls library/ | wc -l</p>
         <h2 className="font-mono text-5xl sm:text-7xl font-bold tracking-tight mt-2">
           1500<span className="text-yellow">+</span>
@@ -24,14 +24,14 @@ export default function SnippetsPage() {
           One snippet per new tab.{" "}
           <span className="text-yellow font-semibold">One rep for your brain.</span>{" "}
           Pulled from <span className="text-yellow font-semibold">14 libraries</span>{" "}
-          of languages, frameworks, and interview questions — with more to come.
+          of languages, frameworks, and interview questions - with more to come.
         </p>
         <p className="font-mono text-xs text-comment mt-4">
           {"// pro tip: CSS snippets support Live Preview"}
         </p>
       </Reveal>
 
-      <div className="lg:w-[54%] w-full">
+      <div className="w-full sm:w-1/2 sm:min-w-0 overflow-hidden">
         <InfiniteGridScroller rows={rows} />
       </div>
     </section>

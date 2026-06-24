@@ -3,7 +3,7 @@ import Reveal from "../editor/reveal";
 const symptoms = [
   "You autocomplete a function you couldn't write by hand.",
   "You ship code you can't explain in review.",
-  "Tab → tab → tab — when did you last actually read code?",
+  "Tab → tab → tab - when did you last actually read code?",
 ];
 
 export default function AtrophySection() {
@@ -41,7 +41,7 @@ export default function AtrophySection() {
           </div>
         </Reveal>
 
-        {/* The fix — what the extension actually is */}
+        {/* The fix - what the extension actually is */}
         <Reveal className="h-full" delay={120}>
           <div className="h-full flex flex-col rounded-xl border border-yellow/40 bg-panel p-6 sm:p-7">
             <p className="font-mono text-sm text-yellow"># the fix</p>
@@ -51,13 +51,13 @@ export default function AtrophySection() {
             <p className="prose-sans text-base text-textLight/90 mt-4">
               <b className="text-yellow font-semibold">30 Seconds of Knowledge</b>{" "}
               is a browser extension that replaces your blank new tab with one
-              real code snippet to read — a language feature, a framework
+              real code snippet to read - a language feature, a framework
               pattern, an interview answer.
             </p>
             <p className="prose-sans text-base text-textLight/80 mt-3">
               No course to finish, no streak to babysit. Just{" "}
               <b className="text-yellow font-semibold">one small rep, every tab</b>{" "}
-              — the fundamentals stay in your head, not just in the autocomplete.
+              - the fundamentals stay in your head, not just in the autocomplete.
             </p>
           </div>
         </Reveal>

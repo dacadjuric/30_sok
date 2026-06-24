@@ -1,4 +1,4 @@
-import { Roboto_Flex, JetBrains_Mono } from "next/font/google";
+import { Roboto_Flex, JetBrains_Mono, Teko } from "next/font/google";
 
 import Loader from "../../components/loader/loader";
 import Header from "../../components/header/header";
@@ -9,6 +9,7 @@ import Script from "next/script";
 
 const roboto = Roboto_Flex({ subsets: ["latin"], variable: "--font-roboto" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const teko = Teko({ subsets: ["latin"], variable: "--font-teko" });
 
 export const metadata = {
   metadataBase: new URL("https://www.30secondsofknowledge.com"),
@@ -21,7 +22,7 @@ export const metadata = {
   },
 
   description:
-    "Don't let your engineering brain rot in the age of AI. 30 Seconds of Knowledge delivers one real code snippet on every new tab — read it, get it, stay sharp in 30 seconds.",
+    "Don't let your engineering brain rot in the age of AI. 30 Seconds of Knowledge delivers one real code snippet on every new tab - read it, get it, stay sharp in 30 seconds.",
 
   keywords: [
     "developer",
@@ -79,7 +80,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Don't let your engineering brain rot in the age of AI",
     description:
-      "AI writes the code. You forget how it works. Get one real code snippet on every new tab and stay sharp — JavaScript, Python, React, and more.",
+      "AI writes the code. You forget how it works. Get one real code snippet on every new tab and stay sharp - JavaScript, Python, React, and more.",
     image: "/twitter.jpg",
     imageAlt: "Banner image for the website 30 Seconds Of Knowledge with logo",
   },
@@ -107,7 +108,7 @@ export default function RootLayout({ children }) {
       />
       <body
         suppressHydrationWarning={true}
-        className={`${mono.variable} ${roboto.variable} font-mono`}
+        className={`${mono.variable} ${roboto.variable} ${teko.variable} font-mono`}
       >
         <Loader />
         <Header />

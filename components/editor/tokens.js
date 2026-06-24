@@ -1,4 +1,4 @@
-// Monochrome syntax palette — yellow / white / gray only, on brand.
+// Monochrome syntax palette - yellow / white / gray only, on brand.
 // Keyword & string carry the yellow accent; everything else stays quiet.
 
 export const K = ({ children }) => (
@@ -23,7 +23,7 @@ export const V = ({ children }) => (
 
 export const P = ({ children }) => <span className="text-comment">{children}</span>;
 
-// Inline code pill — yellow bg / dark text, exactly like the extension.
+// Inline code pill - yellow bg / dark text, exactly like the extension.
 export const Pill = ({ children }) => (
   <code className="rounded bg-yellow px-1.5 py-0.5 font-mono text-[0.85em] text-background">
     {children}
