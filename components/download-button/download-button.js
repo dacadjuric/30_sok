@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import useGetDownloadUrl from "../../hooks/use-get-download-url";
@@ -9,13 +8,14 @@ import chromeIcon from "../../assets/chrome.svg";
 import edgeIcon from "../../assets/edge.svg";
 import firefoxIcon from "../../assets/firefox.svg";
 
-function DownloadButton(props) {
+export default function DownloadButton(props) {
   const { downloadUrl } = useGetDownloadUrl();
 
   return (
     <a
       className="group inline-flex w-fit items-center gap-3 rounded-lg bg-yellow px-5 py-3 font-mono font-bold text-background transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-yellow/20"
       target="_blank"
+      rel="noopener noreferrer"
       href={downloadUrl}
       {...props}
     >
@@ -35,5 +35,3 @@ function DownloadButton(props) {
     </a>
   );
 }
-
-export default dynamic(() => Promise.resolve(DownloadButton), { ssr: false });

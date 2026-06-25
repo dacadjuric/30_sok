@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import dynamic from "next/dynamic";
-
 import cpp from "../../assets/logos/cpp.svg";
 import csharp from "../../assets/logos/csharp.svg";
 import css from "../../assets/logos/css.svg";
@@ -17,71 +15,32 @@ import ramda from "../../assets/logos/ramda.svg";
 import react from "../../assets/logos/react.svg";
 import ruby from "../../assets/logos/ruby.svg";
 
-const obj = {
-  cpp: {
-    name: "C++",
-    logo: cpp,
-  },
-  csharp: {
-    name: "C#",
-    logo: csharp,
-  },
-  css: {
-    name: "CSS",
-    logo: css,
-  },
-  dart: {
-    name: "Dart",
-    logo: dart,
-  },
-  git: {
-    name: "Git",
-    logo: git,
-  },
-  go: {
-    name: "Go",
-    logo: go,
-  },
-  html: {
-    name: "HTML",
-    logo: html,
-  },
-  interview_questions: {
-    name: "Interview Questions",
-    logo: interview_questions,
-  },
-  javascript: {
-    name: "Javascript",
-    logo: javascript,
-  },
-  python: {
-    name: "Python",
-    logo: python,
-  },
-  php: {
-    name: "PHP",
-    logo: php,
-  },
-  ramda: {
-    name: "Ramda",
-    logo: ramda,
-  },
-  react: {
-    name: "React",
-    logo: react,
-  },
-  ruby: {
-    name: "Ruby",
-    logo: ruby,
-  },
-};
+const languages = [
+  { name: "C++", logo: cpp },
+  { name: "C#", logo: csharp },
+  { name: "CSS", logo: css },
+  { name: "Dart", logo: dart },
+  { name: "Git", logo: git },
+  { name: "Go", logo: go },
+  { name: "HTML", logo: html },
+  { name: "Interview Questions", logo: interview_questions },
+  { name: "Javascript", logo: javascript },
+  { name: "Python", logo: python },
+  { name: "PHP", logo: php },
+  { name: "Ramda", logo: ramda },
+  { name: "React", logo: react },
+  { name: "Ruby", logo: ruby },
+];
 
 const DURATION = 35000;
 const DEFAULT_ROWS = 5;
 const TAGS_PER_ROW = 10;
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+function getRowTags(rowIndex) {
+  const offset = rowIndex % languages.length;
+  const rotated = [...languages.slice(offset), ...languages.slice(0, offset)];
+  return rotated.slice(0, TAGS_PER_ROW);
+}
 
 const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
   return (
@@ -109,26 +68,21 @@ function Tag({ text, logo }) {
   );
 }
 
-function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
+export default function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
   return (
     <div className="relative w-full flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden">
       {[...new Array(rows)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
-          duration={random(DURATION - 10000, DURATION + 10000)}
-          reverse={i % 2}
+          duration={DURATION + i * 2500}
+          reverse={i % 2 === 1}
         >
-          {shuffle(Object.values(obj))
-            .slice(0, TAGS_PER_ROW)
-            .map(({ name, logo }, index) => (
-              <Tag text={name} key={index} logo={logo} />
-            ))}
+          {getRowTags(i).map(({ name, logo }) => (
+            <Tag text={name} key={name} logo={logo} />
+          ))}
         </InfiniteLoopSlider>
       ))}
       <div className="pointer-events-none bg-gradient-to-r from-background via-transparent via-[percentage:30%_70%] to-background absolute inset-0" />
     </div>
   );
 }
-export default dynamic(() => Promise.resolve(InfiniteGridScroller), {
-  ssr: false,
-});

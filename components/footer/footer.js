@@ -162,9 +162,7 @@ export default function Footer() {
             <p>
               &copy;{year} &nbsp;
               <Link
-                href="https://30secondsofknowledge.com/"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="https://www.30secondsofknowledge.com/"
                 className="underline"
               >
                 30 Seconds of Knowledge

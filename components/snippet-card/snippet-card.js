@@ -51,9 +51,9 @@ export default function SnippetCard() {
           <Image src={gitLogo} alt="Git" className="size-7" />
         </span>
         <div className="min-w-0">
-          <h2 className="prose-sans text-xl sm:text-2xl font-bold leading-tight">
+          <p className="prose-sans text-xl sm:text-2xl font-bold leading-tight">
             Remove files from the staging area
-          </h2>
+          </p>
           <p className="text-xs text-comment mt-1">
             Updated On: <span className="text-textLight">February 6, 2019</span>
           </p>
