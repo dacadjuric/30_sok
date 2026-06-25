@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 import useGetDownloadUrl from "../../../hooks/use-get-download-url";
 
@@ -9,12 +8,13 @@ import firefoxIcon from "../../../assets/firefox.svg";
 import chromeIcon from "../../../assets/chrome.svg";
 import edgeIcon from "../../../assets/edge.svg";
 
-function DownloadCard(props) {
+export default function DownloadCard(props) {
   const { downloadUrl } = useGetDownloadUrl();
   return (
     <a
       className="flex-1 min-w-[240px] px-6 py-7 rounded-lg bg-panel border border-line hover:border-yellow/40 transition-colors flex flex-col items-center"
       target="_blank"
+      rel="noopener noreferrer"
       href={downloadUrl}
       {...props}
     >
@@ -30,5 +30,3 @@ function DownloadCard(props) {
     </a>
   );
 }
-
-export default dynamic(() => Promise.resolve(DownloadCard), { ssr: false });

@@ -7,9 +7,12 @@ import Lottie from "react-lottie";
 import animation from "./animation.json";
 import useScrollLock from "../../hooks/use-scroll-lock";
 
+const LOADER_DURATION_MS = 1200;
+
 export default function Loader() {
   const timeoutRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [loadGumroad, setLoadGumroad] = useState(false);
   useScrollLock(isLoading);
 
   const turnOffLoading = useCallback(() => {
@@ -19,16 +22,18 @@ export default function Loader() {
 
     timeoutRef.current = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+      setLoadGumroad(true);
+    }, LOADER_DURATION_MS);
   }, []);
 
   useEffect(() => {
+    turnOffLoading();
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, []);
+  }, [turnOffLoading]);
 
   const loaderStyles = {
     display: "flex",
@@ -48,25 +53,24 @@ export default function Loader() {
   };
 
   return (
-    <div style={loaderStyles}>
-      <Script
-        src="https://gumroad.com/js/gumroad.js"
-        onLoad={turnOffLoading}
-        onReady={turnOffLoading}
-        onError={turnOffLoading}
-      />
-      <Lottie
-        width={320}
-        options={{
-          loop: true,
-          autoplay: true,
-          animationData: animation,
-        }}
-        height="auto"
-        ariaRole="img"
-        ariaLabel="Loading Animation"
-        isClickToPauseDisabled
-      />
-    </div>
+    <>
+      {loadGumroad && (
+        <Script src="https://gumroad.com/js/gumroad.js" strategy="lazyOnload" />
+      )}
+      <div style={loaderStyles}>
+        <Lottie
+          width={320}
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: animation,
+          }}
+          height="auto"
+          ariaRole="img"
+          ariaLabel="Loading Animation"
+          isClickToPauseDisabled
+        />
+      </div>
+    </>
   );
 }

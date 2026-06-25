@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import * as rdd from "react-device-detect";
 
 import { DOWNLOAD_URLS } from "../constants/download-urls";
@@ -14,13 +15,21 @@ const URLS = {
   arc: DOWNLOAD_URLS.chrome,
 };
 
-export default function useGetDownloadUrl() {
-  const currentBrowser = (rdd.browserName || "").toLowerCase();
+const DEFAULT_URL = DOWNLOAD_URLS.chrome;
 
-  const downloadUrl = URLS[currentBrowser];
+export default function useGetDownloadUrl() {
+  const [downloadUrl, setDownloadUrl] = useState(DEFAULT_URL);
+  const [isSupported, setIsSupported] = useState(true);
+
+  useEffect(() => {
+    const currentBrowser = (rdd.browserName || "").toLowerCase();
+    const url = URLS[currentBrowser];
+    setDownloadUrl(url || DEFAULT_URL);
+    setIsSupported(!!url);
+  }, []);
 
   return {
     downloadUrl,
-    isSupported: !!downloadUrl,
+    isSupported,
   };
 }
