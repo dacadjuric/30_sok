@@ -101,16 +101,17 @@ const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
 
 function Tag({ text, logo }) {
   return (
-    <div className="flex flex-auto items-center gap-x-3 text-white text-sm bg-white/5 rounded-md py-4 px-5 mr-6 ">
-      <Image src={logo} alt={`${text} icon`} className="w-6 h-6" />
-      <span className="font-medium whitespace-nowrap text-md">{text}</span>
+    <div className="flex flex-shrink-0 items-center gap-x-3 text-textLight text-sm bg-panel border border-line rounded-md py-3 px-4 mr-5 font-mono hover:border-yellow/40 transition-colors">
+      <Image src={logo} alt={`${text} icon`} className="w-5 h-5" />
+      <span className="font-medium whitespace-nowrap">{text}</span>
+      <span className="text-comment text-xs whitespace-nowrap">snippet</span>
     </div>
   );
 }
 
 function InfiniteGridScroller({ rows = DEFAULT_ROWS }) {
   return (
-    <div className="relative w-11/12 sm:w-[50%] flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden top-6">
+    <div className="relative w-full flex flex-shrink-0 flex-col gap-4 sm:gap-6 overflow-hidden">
       {[...new Array(rows)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}

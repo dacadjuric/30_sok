@@ -1,4 +1,4 @@
-import { Roboto_Flex, Teko } from "next/font/google";
+import { Roboto_Flex, JetBrains_Mono, Teko } from "next/font/google";
 
 import Loader from "../../components/loader/loader";
 import Header from "../../components/header/header";
@@ -8,6 +8,7 @@ import "./globals.css";
 import Script from "next/script";
 
 const roboto = Roboto_Flex({ subsets: ["latin"], variable: "--font-roboto" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 const teko = Teko({ subsets: ["latin"], variable: "--font-teko" });
 
 export const metadata = {
@@ -21,7 +22,7 @@ export const metadata = {
   },
 
   description:
-    "Boost your coding skills in just 30 seconds! 30 Seconds of Knowledge delivers quick, high-quality code snippets and interview questions on every new tab.",
+    "Don't let your engineering brain rot in the age of AI. 30 Seconds of Knowledge delivers one real code snippet on every new tab - read it, get it, stay sharp in 30 seconds.",
 
   keywords: [
     "developer",
@@ -57,9 +58,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "30 Seconds Of Knowledge",
+    title: "Don't let your engineering brain rot in the age of AI | 30 Seconds Of Knowledge",
     description:
-      "Boost your coding skills in just 30 seconds! 30 Seconds of Knowledge delivers quick, high-quality code snippets and interview questions on every new tab.",
+      "AI writes the code. You forget how it works. Get one real code snippet on every new tab and stay sharp in 30 seconds. 1500+ snippets, free.",
     url: "https://www.30secondsofknowledge.com/",
     siteName: "30 Seconds Of Knowledge",
     locale: "en_US",
@@ -77,9 +78,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "30 Seconds of Knowledge",
+    title: "Don't let your engineering brain rot in the age of AI",
     description:
-      "Learn to code faster! Get bite-sized coding knowledge with high-quality snippets on every new tab. Master JavaScript, Python, React, and more.",
+      "AI writes the code. You forget how it works. Get one real code snippet on every new tab and stay sharp - JavaScript, Python, React, and more.",
     image: "/twitter.jpg",
     imageAlt: "Banner image for the website 30 Seconds Of Knowledge with logo",
   },
@@ -107,7 +108,7 @@ export default function RootLayout({ children }) {
       />
       <body
         suppressHydrationWarning={true}
-        className={`${teko.variable} ${roboto.variable}`}
+        className={`${mono.variable} ${roboto.variable} ${teko.variable} font-mono`}
       >
         <Loader />
         <Header />
